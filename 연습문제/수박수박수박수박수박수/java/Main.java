@@ -1,0 +1,26 @@
+public class Main {
+
+    public static void main(String[] args) {
+    
+        int[] n = {3, 4};
+
+        for (int i=0; i<n.length; i++) {
+            System.out.println(solution(n[i]));
+        }
+    }
+
+    public static String solution(int n) {
+        
+        StringBuilder sb = new StringBuilder();
+        
+        for (int i=0; i<n/2; i++) {
+            sb.append("수박");
+        }
+        
+        if (n % 2 != 0) {
+            sb.append("수");
+        }
+        
+        return sb.toString();
+    }
+}
