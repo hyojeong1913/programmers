@@ -23,6 +23,7 @@ public class Main {
         
         PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
         
+        // 우선순위 높은 순으로 큐에 삽입
         for (int i=0; i<priorities.length; i++) {
             queue.offer(priorities[i]);
         }
@@ -36,6 +37,7 @@ public class Main {
                     queue.poll();
                     answer++;
                     
+                    // 찾던 해당 문서인 경우 큐를 비워주고 탐색 중단
                     if (i == location) {
                         queue.clear();
                         break;
